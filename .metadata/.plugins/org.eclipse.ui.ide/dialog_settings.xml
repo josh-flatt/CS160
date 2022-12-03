@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\joshm\eclipse-workspace\Joshua_Flatt_CS160_Ass1"/>
+			<item value="C:\Users\joshm\eclipse-workspace\CS160_Final_Project"/>
+			<item value="D:\CS160\Assignment 7"/>
+			<item value="D:\CS160\Assignment 5"/>
+			<item value="D:\CS160\Assignment 3"/>
+			<item value="D:\CS160\Assignment 2\Problem 3 - Prime numbers in 101, 10101, 1010101"/>
+			<item value="D:\CS160\Assignment 2\Problem 2 - Perfect square of n in 1!+2!+...n!"/>
+			<item value="D:\CS160\Assignment 2\Problem 1 - Sum of 1 to N"/>
+			<item value="D:\javaprograms_assignment1\Joshua_Flattt_CS160"/>
+			<item value="D:\javaprograms_assignment1\Timothy_Falin_Ass1cs160"/>
+			<item value="D:\CS160 Lab 1"/>
+		</list>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="706"/>
+		<item key="DIALOG_Y_ORIGIN" value="142"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

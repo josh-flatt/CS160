@@ -1,0 +1,10 @@
+Writing to file DeanOutput.txt
+study1
+by Josh
+Number of elements in dataset: 5
+Sum: 13.0
+Average: 2.6
+Min: 0.0
+Max: 6.0
+Variance: 5.800000000000001
+Standard Deviation: 2.4083189157584592

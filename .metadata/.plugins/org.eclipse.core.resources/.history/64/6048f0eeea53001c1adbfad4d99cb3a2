@@ -1,0 +1,39 @@
+package beep;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.net.URL;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
+
+
+
+public class nuremburg {
+
+	public static void main(String[] args) 
+	{
+		playSound("C:\\Users\\joshm\\eclipse-workspace\\STUPID AUDIO\\src\\beep\\Door.wav");
+
+
+	}
+	
+	public static void playSound(String url) {
+	    if (url.isEmpty())
+	        return;
+	    try {
+
+	        Clip clip = AudioSystem.getClip();
+	        BufferedInputStream x = new BufferedInputStream(new FileInputStream(url));
+	        AudioInputStream inputStream = AudioSystem.getAudioInputStream(x);
+	        System.out.println("We got here");
+	        clip.open(inputStream);
+	        clip.start();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+
+}
