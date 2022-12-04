@@ -1,8 +1,5 @@
-
-
 import java.io.IOException;
 import java.net.URL;
-import javax.sound.sampled.*;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -13,7 +10,6 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class sound 
 {
-
 	public static Mixer mixer;
 	public static Clip clip;
 	
@@ -27,12 +23,9 @@ public class sound
 		} */
 
 		mixer = AudioSystem.getMixer(mixInfos[0]);
-		
 		DataLine.Info dataInfo = new DataLine.Info(Clip.class, null);
 		try { clip = (Clip)mixer.getLine(dataInfo); }
 		catch(LineUnavailableException lue) {lue.printStackTrace(); }
-		
-		
 		
 		try
 		{
@@ -43,7 +36,6 @@ public class sound
 		catch(LineUnavailableException lue) {lue.printStackTrace(); }
 		catch(UnsupportedAudioFileException uafe) {uafe.printStackTrace();}
 		catch(IOException ioe) {ioe.printStackTrace(); }
-		
 		clip.start();
 		
 		do
@@ -52,7 +44,4 @@ public class sound
 			catch(InterruptedException ie) {ie.printStackTrace(); }
 		} while (clip.isActive());
 	}
-	
-	
-
 }
