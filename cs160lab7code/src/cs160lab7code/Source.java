@@ -6,100 +6,74 @@ public class Source
 {
 	public static void main(String args[])
 	{
+		//Initialize Variables
+		Scanner scnr = new Scanner(System.in);
+		String input;
+		int startHour;
+		int endHour;
+		
 		//Clock part 1...input
-		/*
-		Scanner s = new Scanner(System.in);
-		String N = s.nextLine();
-		int n = Integer.parseInt(N);
-		System.out.print("It's "+n+" o'clock!");
-		for (int i=0;i<n;i++)
+		input = scnr.nextLine();
+		startHour = Integer.parseInt(input);
+		System.out.print("It's "+ startHour +" o'clock!");
+		for (int i = 0; i < startHour; i++)
 			System.out.print(" Cuckoo!");
-		*/
-		
-		
+
 		
 		//Clock part 2...start and end hours
-		/*
-		Scanner s = new Scanner(System.in);
-        String A = s.nextLine();
-        int a = Integer.parseInt(A);
-        String B = s.nextLine();
-        int b = Integer.parseInt(B);
-        for (int j=a;j<=b;j++)
+        input = scnr.nextLine();
+        startHour = Integer.parseInt(input);
+        input = scnr.nextLine();
+        endHour = Integer.parseInt(input);
+        for (int j = startHour; j <= endHour; j++)
         {
-            System.out.print("It's "+j+" o'clock! ");
-            for (int i=0;i<j;i++)
+            System.out.print("It's "+ j +" o'clock! ");
+            for (int i = 0; i < j; i++)
             {
                 System.out.print("Cuckoo! ");
             }
             System.out.println();
         }
-        */
-		
-		
-		
-		
+        
+
 		//Clock part 3...Start and end hours, including a wrap-around after 12.
-       /*
-		Scanner s = new Scanner(System.in);
-        String A = s.nextLine();
-        int a = Integer.parseInt(A);
-        String B = s.nextLine();
-        int b = Integer.parseInt(B);
-        
-        if (a>b)
+        input = scnr.nextLine();
+        startHour = Integer.parseInt(input);
+        input = scnr.nextLine();
+        endHour = Integer.parseInt(input);
+        if (startHour > endHour) //Wrap around past 12:00
         {
-        	for (int j=a;j<=12;j++)
+        	for (int hr = startHour; hr <= 12; hr++)
         	{
-        		System.out.print("It's "+j+" o'clock! ");
-        		for (int i=0;i<j;i++)
+        		System.out.print("It's "+ hr +" o'clock! ");
+        		for (int i = 0; i < hr; i++)
         		{
         			System.out.print("Cuckoo! ");
         		}
         		System.out.println();
         	}
-        	for (int j=1;j<=b;j++)
+        	for (int hr = 1; hr <= endHour; hr++)
         	{
-        		System.out.print("It's "+j+" o'clock! ");
-        		for (int i=0;i<j;i++)
+        		System.out.print("It's "+ hr +" o'clock! ");
+        		for (int i = 0; i < hr; i++)
         		{
         			System.out.print("Cuckoo! ");
         		}
         		System.out.println();
         	}
         }
-        
-        if (a<b)
+        if (startHour < endHour) //No wrap
         {
-        	for (int j=a;j<=b;j++)
+        	for (int j = startHour; j <= endHour; j++)
         	{
-        		System.out.print("It's "+j+" o'clock! ");
-        		for (int i=0;i<j;i++)
+        		System.out.print("It's "+ j +" o'clock! ");
+        		for (int i = 0; i < j; i++)
         		{
         			System.out.print("Cuckoo! ");
         		}
         		System.out.println();
         	}
         }
-        */
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+        scnr.close();
 	}
 }
