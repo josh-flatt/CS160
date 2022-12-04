@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author joshm
+ *
+ */
+module RandomGenerator {
+}
