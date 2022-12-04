@@ -1,4 +1,3 @@
-
 /*****************************************************************************
  *                          Assignment 2 - Functions                         *
  *                          Problem 1 - Sum of 1..n                          *
@@ -18,91 +17,84 @@
  * 1+2+3...+n == n(n+1)/2 with zero exceptions in the range.                 *
  *                                                                           *
  * COPYRIGHT:                                                                *
- * This program is copyright (c)2021 Joshua Flatt, Dean Zeller, and Richard  *
- * Grassl.                                                                   *
+ * This program is copyright (c)2021-2022 Joshua Flatt, Dean Zeller, and     *
+ * Richard Grassl.                                                           *
  *                                                                           *
  *****************************************************************************/
 
 public class problem1 
 {
-
-	public static int leftSide(int n)
+	public static void main(String[] args)
 	{
-		int total = 0;
-		for (int i=0;i<(n+1);i++)
-		{
-			total += i;
-		}
-		return(total);
+		testEqualityVerbose(0, 25);
+		testEqualitySummary(0, 10000);
 	}
 	
-	public static int rightSide(int n)
-	{
-		int total = n*(n+1)/2;
-		return(total);
-	}
-	
-	public static void testEqualityVerbose(int startAt, int upTo)
+	public static void testEqualityVerbose(int start, int upperBound)
 	{
 		System.out.println("Verbose Mode Testing");
-		System.out.println("Testing equality for all numbers from "+startAt+" to "+upTo+" (verbose mode)");
-		int totalEqual = 0;
-		int totalNotEqual = 0;
-		for (int i=startAt; i<(upTo+1);i++)
+		System.out.println("Testing equality for all numbers from "+start+" to "+upperBound+" (verbose mode)");
+		int countEqual = 0;
+		int countNotEqual = 0;
+		for (int i=start; i<(upperBound+1);i++)
 		{
-			int left = leftSide(i);
-			int right = rightSide(i);
+			int left = summation(i);
+			int right = formula(i);
 			String message;
 			if (left == right)
 			{
 				message = "equal";
-				totalEqual += 1;
+				countEqual += 1;
 			}
 			else
 			{
 				message = "not equal";
-				totalNotEqual += 1;
+				countNotEqual += 1;
 			}
 			System.out.println(i+"   "+left+"   "+right+"   "+message);
 		}
-		System.out.println("There were "+totalEqual+" lines correct.");
-		System.out.println("There were "+totalNotEqual+" lines not correct.");
+		System.out.println("There were "+countEqual+" lines correct.");
+		System.out.println("There were "+countNotEqual+" lines not correct.");
 	}
-	public static void testEqualitySummary(int startAt, int upTo, int progressSkipValue, int progressUpdateValue)
+	
+	public static void testEqualitySummary(int start, int upperBound)
 	{
 		System.out.println("Summary Mode Testing");
-		System.out.println("Printing n every "+progressUpdateValue+" iterations.");
-		int totalEqual = 0;
-		int totalNotEqual = 0;
-		for (int i=startAt; i<(upTo+1);i++)
+		System.out.println("Printing n every 1,000 iterations.");
+		int countEqual = 0;
+		int countNotEqual = 0;
+		for (int i=start; i<(upperBound+1);i++)
 		{
-			int left = leftSide(i);
-			int right = rightSide(i);
-			if (left != right)
+			int summation = summation(i);
+			int formula = formula(i);
+			if (summation != formula)
 			{
-				System.out.println(i+"  "+left+"  "+right);
-				totalNotEqual += 1;
+				System.out.println(i+"  "+summation+"  "+formula);
+				countNotEqual++;
 			}
 			else
-			{
-				totalEqual +=1;
-			}
-			if (i%progressUpdateValue == 0)
-				System.out.println("  n = "+i);
-			if (i%progressSkipValue == 0)
-				System.out.println("#");
+				countEqual++;
+			if (i % 1000 == 0)
+				System.out.println(" n = "+i);
 		}
 		System.out.println();
-		System.out.println("There were "+totalEqual+" lines correct.");
-		System.out.println("There were "+totalNotEqual+" lines not correct.");
+		System.out.println("There were "+countEqual+" lines correct.");
+		System.out.println("There were "+countNotEqual+" lines not correct.");
 	}
 	
-	
-	public static void main(String[] args)
+	public static int summation(int n)
 	{
-		testEqualityVerbose(0,25);
-		testEqualitySummary(0, 10000, 1000, 10000);
-
+		int sum = 0;
+		for (int i = 0; i < (n+1); i++)
+		{
+			sum += i;
+		}
+		return(sum);
 	}
-
+	
+	public static int formula(int n)
+	{
+		int total = n*(n+1)/2;
+		return(total);
+	}
 }

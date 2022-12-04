@@ -1,7 +1,8 @@
-
+import java.util.Random;
+import java.util.Scanner;
 
 //////////////////////////////////////////////////////////////////////////////////
-// Lab 1 – A Python Program                                                     //
+// Lab 1  - A Python Program                                                    //
 // Part 1 - Random Number Generator                                             //
 // PROGRAMMER:        Joshua Flatt   flat7792@bears.unco.edu                    //
 // CLASS:             CS160                                                     //
@@ -25,14 +26,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-
-//importing random
-import java.util.Random;
-import java.util.Scanner;
-
-
 public class Joshua_Flatt_CS160_Ass1 {
-
 	public static void main(String[] args) {
 		Random rand = new Random();
 		int answer = rand.nextInt(11);

@@ -1,3 +1,4 @@
+import java.lang.Math;
 
 /*****************************************************************************
  *                          Assignment 2 - Functions                         *
@@ -18,32 +19,46 @@
  * factorials, until the numbers become too large for the program to handle. *
  *                                                                           *
  * COPYRIGHT:                                                                *
- * This program is copyright (c)2021 Joshua Flatt, Dean Zeller, and Richard  *
- * Grassl.                                                                   *
+ * This program is copyright (c)2021-2022 Joshua Flatt, Dean Zeller, and     *
+ * Richard Grassl.                                                           *
  *                                                                           *
  *****************************************************************************/
 
-import java.lang.Math;
 
 public class problem2
 {
-	
-	public static long factorial(int x)
+	public static void main(String[] args)
 	{
-		 if (x==1 || x==0)
-	         return 1;
-	      else
-	         return x*factorial(x-1);
+		System.out.println(sumOfFactorials(13));
+		
+		for (int i=1;i<35;i++)
+		{
+			System.out.println(i+" --> "+sumOfFactorials(i));
+			if (isPerfectSquare(sumOfFactorials(i)))
+			{
+				System.out.println("It holds for i = "+i);
+			}
+		}
+	}
+	
+	public static long factorial(int n)
+	{
+		if (n == 1 || n == 0) 
+		{
+			return 1;
+		}
+	    return n * factorial(n - 1);
 	}
 	
 	public static boolean isPerfectSquare(long n)
 	{
-		double a = Math.sqrt(n);
-		double b = a*100;
-		if (b%100 == 0)
+		double sqrt = Math.sqrt(n);
+		sqrt = sqrt*100;
+		if (sqrt % 100 == 0)
+		{
 			return true;
+		}
 		return false;
- 
 	}
 	
 	public static long sumOfFactorials(long n)
@@ -56,17 +71,4 @@ public class problem2
 		return sum;			
 	}
 	
-	public static void main(String[] args)
-	{
-		System.out.println(sumOfFactorials(13));
-		
-		for (int i=1;i<35;i++)
-		{
-			System.out.println(i+" --> "+sumOfFactorials(i));
-			if (isPerfectSquare(sumOfFactorials(i)))
-				System.out.println("It holds for i = "+i);
-		}
-
-	}
-
 }

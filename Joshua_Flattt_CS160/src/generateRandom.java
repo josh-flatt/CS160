@@ -3,7 +3,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class generateRandom {
-
 	public static void main(String[] args) {
 		Random rand = new Random();
 		int answer = rand.nextInt(11);
@@ -29,5 +28,4 @@ public class generateRandom {
 		System.out.println("Guesses Left:"+guesses_left);
 		System.out.println("This is x: "+x);
 	}
-
 }

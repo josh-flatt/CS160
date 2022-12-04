@@ -28,34 +28,38 @@
 public class problem3 
 {
 
+	public static void main(String[] args)
+	{
+		prime10101(1,9);
+		System.out.println();
+		//prime10101(18,18);
+		System.out.println("Iteration 18 could be prime, hangs program");
+		System.out.println();
+		prime10101(19,100);
+	}
+	
 	public static boolean isPrime(int n)
 	{
-		for (int i=2;i<(Math.floorDiv(n, 2));i++)
+		for (int i = 2; i < (Math.floorDiv(n, 2)); i++)
 		{
-			if (n%i ==0)
-				return false;
+			if (n % i == 0) { return false; }
 		}
 		return true;
 	}
 	
 	public static boolean isPrime2(long n)
 	{
-		if (n==2)
-			return true;
-		if (n==3)
-			return true;
-		if (n%2==0)
-			return false;
-		if (n%3==0)
-			return false;
+		if (n == 2) { return true; }
+		if (n == 3) { return true; }
+		if (n % 2 == 0) { return false; }
+		if (n % 3 == 0) { return false; }
 		int i = 5;
 		int w = 2;
-		while ((i*i)<=n)
+		while ((i * i) <= n)
 		{
-			if (n%i==0)
-				return false;
-			i+=w;
-			w=6-w;
+			if (n % i == 0) { return false; }
+			i += w;
+			w = 6 - w;
 		}
 		return true;
 	}
@@ -63,11 +67,11 @@ public class problem3
 	public static void prime10101(int start, int end)
 	{
 		String numString = "1";
-		for (int i=0; i<start; i++)
+		for (int i = 0; i < start; i++)
 		{
 			numString += "01";
 		}
-		for (int i=start; i<end+1; i++)
+		for (int i = start; i < end + 1; i++)
 		{
 			long num = Long.parseLong(numString);
 			System.out.println("Doing iteration "+i+" "+num);
@@ -76,17 +80,4 @@ public class problem3
 			numString += "01";
 		}
 	}
-	
-	
-	public static void main(String[] args)
-	{
-		prime10101(1,12);
-		System.out.println();
-		//prime10101(18,18);
-		System.out.println("Iteration 18 could be prime, hangs program");
-		System.out.println();
-		prime10101(19,100);
-
-	}
-
 }
