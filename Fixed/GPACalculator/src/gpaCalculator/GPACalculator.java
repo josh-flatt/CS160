@@ -1,4 +1,4 @@
-package dabba;
+package gpaCalculator;
 import java.util.*;
 
 public class GPACalculator {
