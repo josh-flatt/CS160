@@ -6,6 +6,11 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\joshm\Documents\GitHub\CS160\Another Audio Output Example"/>
+			<item value="C:\Users\joshm\Documents\GitHub\CS160\Examples"/>
+			<item value="C:\Users\joshm\Documents\GitHub\CS160\Fixed\Audio Output Example"/>
+			<item value="C:\Users\joshm\Documents\GitHub\CS160\Audio Output Example"/>
+			<item value="C:\Users\joshm\Documents\GitHub\CS160\GPACalculator"/>
 			<item value="C:\Users\joshm\Documents\GitHub\CS160"/>
 			<item value="C:\Users\joshm\eclipse-workspace\Joshua_Flatt_CS160_Ass1"/>
 			<item value="C:\Users\joshm\eclipse-workspace\CS160_Final_Project"/>

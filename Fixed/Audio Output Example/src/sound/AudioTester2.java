@@ -1,3 +1,5 @@
+package sound;
+
 import java.io.IOException;
 import java.net.URL;
 import javax.sound.sampled.AudioInputStream;
@@ -8,12 +10,12 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-public class sound 
+public class AudioTester2
 {
 	public static Mixer mixer;
 	public static Clip clip;
 	
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
 		/*
@@ -32,7 +34,7 @@ public class sound
 		
 		try
 		{
-			URL soundURL = sound.class.getResource("/Door.wav");
+			URL soundURL = AudioTester2.class.getResource("/Door.wav");
 			AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundURL);
 			clip.open(audioStream);
 		}
@@ -46,5 +48,7 @@ public class sound
 			try { Thread.sleep(50); }
 			catch(InterruptedException ie) { ie.printStackTrace(); }
 		} while (clip.isActive());
+
 	}
+
 }
