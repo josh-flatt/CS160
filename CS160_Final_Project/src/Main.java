@@ -1,17 +1,9 @@
 
-public class Main 
-{
-
-	public static void main(String[] args) 
-	{
-		Character character = new Character();
-		Rooms room = new Rooms();
-		
-		//Initializes character
-		character.callAll();
-		//Begins game
-		room.roomCaller();
-
+public class Main {
+	
+	public static void main(String[] args) {
+		SoundPlayer soundPlayer = new SoundPlayer();
+		Game game = new Game(soundPlayer);
+		game.start();
 	}
-
 }
