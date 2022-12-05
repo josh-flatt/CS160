@@ -1,6 +1,6 @@
-Writing to file DeanOutput.txt
-study1
-by Josh
+Writing to file export.txt
+dfsg
+by sfd
 Number of elements in dataset: 5
 Sum: 13.0
 Average: 2.6

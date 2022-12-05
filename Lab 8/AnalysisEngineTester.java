@@ -23,7 +23,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-
 public class AnalysisEngineTester
 {
     public static void main(String args[])
@@ -33,6 +32,5 @@ public class AnalysisEngineTester
         
         // call study phases in order
         study1.callAllPhases();
-    
     }
 }
